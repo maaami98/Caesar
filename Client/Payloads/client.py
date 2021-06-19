@@ -18,7 +18,7 @@ caesar_folder = 'REPLACE_ME'
 
 def md5 (string):
 	m = hashlib.md5()
-	m.update (string)
+	m.update (string.encode()) #python3 issue
 	return m.hexdigest()
 
 def split_response (response, start_separator, end_separator):
